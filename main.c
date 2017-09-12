@@ -31,7 +31,7 @@ struct NewWindow NewWindow =
     280,120, /* Width and height */
     4, 6, /* Colors (0-256) */
     CLOSEWINDOW,
-    WindoWCLOSE | SMART_REFRESH | ACTIVATE | WINDOWSIZING | SIZEBRIGHT | WINDOWDRAG| WINDOWDEPTH,
+    WINDOWCLOSE | SMART_REFRESH | ACTIVATE | WINDOWSIZING | SIZEBRIGHT | WINDOWDRAG| WINDOWDEPTH,
     NULL,
     NULL,
     "*** Hello ***",
@@ -68,8 +68,7 @@ int main(int argc, int **argv)
     CloseWindow(Window); /* Close Everything in Sequence */
     CloseScreen(Screen);
     CloseLibrary(IntuitionBase);
-    exit(true);
-}
+    exit(0);
 }
 
 
